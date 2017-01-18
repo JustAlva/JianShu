@@ -1,16 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.zkd.activity.jianshu.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+    <com.zkd.views.MyViewPager
+        android:id="@+id/vp_main_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <!--关注 -->
+            <LinearLayout
+                android:id="@+id/ll_main_follow"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_main_follow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/bottom_bar_img_height"
+                    android:src="@drawable/main_follow" />
+
+                <TextView
+                    android:id="@+id/tv_main_follow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_font_grey_qian"
+                    android:text="关注" />
+            </LinearLayout>
+
+            <!-- 发现 -->
+            <LinearLayout
+                android:id="@+id/ll_main_find"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_main_find"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/bottom_bar_img_height"
+                    android:src="@drawable/main_find" />
+
+                <TextView
+                    android:id="@+id/tv_main_find"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_font_grey_qian"
+                    android:text="发现" />
+            </LinearLayout>
+
+            <!-- 写文章 -->
+            <LinearLayout
+                android:id="@+id/ll_main_write"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_main_write"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/bottom_bar_img_height"
+                    android:src="@drawable/main_write" />
+
+                <TextView
+                    android:id="@+id/tv_main_write"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_font_grey_qian"
+                    android:text="写文章" />
+            </LinearLayout>
+
+            <!-- 消息 -->
+            <LinearLayout
+                android:id="@+id/ll_main_news"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_main_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/bottom_bar_img_height"
+                    android:src="@drawable/main_news" />
+
+                <TextView
+                    android:id="@+id/tv_main_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_font_grey_qian"
+                    android:text="我的" />
+            </LinearLayout>
+
+            <!-- 我的 -->
+            <LinearLayout
+                android:id="@+id/ll_main_personal"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_main_personal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/bottom_bar_img_height"
+                    android:src="@drawable/main_personal" />
+
+                <TextView
+                    android:id="@+id/tv_main_personal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_font_grey_qian"
+                    android:text="我的" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
