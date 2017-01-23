@@ -3,5 +3,10 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <!--底部主布局的图片高度-->
     <dimen name="bottom_bar_img_height">20dp</dimen>
+
+    <!--标题栏高度-->
+    <dimen name="main_titlebar_height">48dp</dimen>
+    <dimen name="title_bar_font">20sp</dimen>
 </resources>

@@ -6,6 +6,8 @@
 
     <!--白色-->
     <color name="white">#ffFFFFFF</color>
+    <!--黑色-->
+    <color name="black">#ff000000</color>
 
     <!--灰色-->
     <color name="main_font_grey">#ff636363</color>

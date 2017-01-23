@@ -43,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
+        //单纯的改变状态栏的颜色
+         getWindow().setStatusBarColor(getResources().getColor(R.color.main_font_grey_qian));
+
         setContentView(R.layout.activity_main);
 
         try {
