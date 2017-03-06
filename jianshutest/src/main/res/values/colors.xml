@@ -13,6 +13,8 @@
     <color name="main_font_grey">#ff636363</color>
     <!--浅灰色-->
     <color name="main_font_grey_qian">#ff989898</color>
+    <!--浅背景色-->
+    <color name="main_bg_grey_qian">#ffF3F3F3</color>
     <!-- 绿色 -->
     <color name="green">#ff00C090</color>
 

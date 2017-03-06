@@ -8,6 +8,7 @@
     tools:showIn="@layout/fragment_follow"
     android:background="@color/white">
 
+    <!--左边-->
     <LinearLayout
         android:id="@+id/ll_title_bar_left"
         android:layout_width="50dp"
@@ -16,19 +17,23 @@
         android:layout_marginLeft="3dp"
         android:gravity="center">
 
+        <!--图标-->
         <ImageView
             android:id="@+id/img_title_bar_left"
             android:layout_width="wrap_content"
             android:layout_height="24dp" />
 
+        <!--内容-->
         <TextView
             android:id="@+id/tv_title_bar_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/font_content"
             android:text="" />
 
     </LinearLayout>
 
+    <!--中间标题-->
     <LinearLayout
         android:id="@+id/ll_title_bar_between"
         android:layout_width="wrap_content"
@@ -37,20 +42,23 @@
         android:gravity="center"
         android:layout_centerInParent="true">
 
+        <!--标题内容-->
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="@dimen/title_bar_font"
+            android:textSize="@dimen/font_content"
             android:textColor="@color/black"/>
 
+        <!--标题图标-->
         <ImageView
             android:id="@+id/img_title_bar_between"
             android:layout_width="wrap_content"
             android:layout_height="30dp" />
     </LinearLayout>
 
+    <!--右边-->
     <LinearLayout
         android:id="@+id/ll_title_bar_right"
         android:layout_width="50dp"
@@ -59,22 +67,27 @@
         android:layout_marginRight="3dp"
         android:gravity="center">
 
+        <!--右边图片-->
         <ImageView
             android:id="@+id/img_title_bar_right"
             android:layout_width="wrap_content"
             android:layout_height="30dp" />
 
+        <!--右边内容-->
         <TextView
             android:id="@+id/tv_title_bar_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/font_content"
             android:text="" />
 
     </LinearLayout>
 
+    <!--下划线-->
     <View
+        android:id="@+id/v_title_bar_line"
         android:layout_width="match_parent"
-        android:layout_height="0.5dp"
+        android:layout_height="0.2dp"
         android:background="@color/main_font_grey"
         android:layout_alignParentBottom="true"/>
 </RelativeLayout>

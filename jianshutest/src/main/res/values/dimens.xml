@@ -8,5 +8,18 @@
 
     <!--标题栏高度-->
     <dimen name="main_titlebar_height">48dp</dimen>
-    <dimen name="title_bar_font">20sp</dimen>
+    <!--关注页item高度-->
+    <dimen name="follow_item_height">74dp</dimen>
+    <!--关注页头像大小-->
+    <dimen name="follow_item_img_size">44dp</dimen>
+
+    <!-- 字体大小 -->
+    <dimen name="font_title">20sp</dimen>
+    <dimen name="font_content_19">19sp</dimen>
+    <dimen name="font_content">18sp</dimen>
+    <dimen name="font_content_small">16sp</dimen>
+    <dimen name="font_note">14sp</dimen>
+
+    <!-- 布局高度 -->
+    <dimen name="layout_ll_content">40dp</dimen>
 </resources>

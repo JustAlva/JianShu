@@ -1,5 +1,6 @@
 package com.zkd.activity.jianshu;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -7,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -17,6 +19,8 @@ import com.zkd.fragments.NewsFragment;
 import com.zkd.fragments.PersonalFragment;
 import com.zkd.fragments.WriteFragment;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,13 +43,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private List<ImageView> mTabsImg = new ArrayList<ImageView>();
     private List<TextView> mTabsText = new ArrayList<TextView>();
 
+    /**
+     * 修改状态栏字体颜色
+     * @param darkmode true：深色 ； false：浅色
+     * @param activity
+     */
+    public void setStatusBarDarkMode(boolean darkmode, Activity activity) {
+        Class<? extends Window> clazz = activity.getWindow().getClass();
+        try {
+            int darkModeFlag = 0;
+            Class<?> layoutParams = Class.forName("android.view.MiuiWindowManager$LayoutParams");
+            Field field = layoutParams.getField("EXTRA_FLAG_STATUS_BAR_DARK_MODE");
+            darkModeFlag = field.getInt(layoutParams);
+            Method extraFlagField = clazz.getMethod("setExtraFlags", int.class, int.class);
+            extraFlagField.invoke(activity.getWindow(), darkmode ? darkModeFlag : 0, darkModeFlag);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         //单纯的改变状态栏的颜色
-         getWindow().setStatusBarColor(getResources().getColor(R.color.main_font_grey_qian));
-
+        //getWindow().setStatusBarColor(getResources().getColor(R.color.white));
+        //改变状态栏字体颜色，true为深色，false为浅色
+        setStatusBarDarkMode(true,MainActivity.this);
         setContentView(R.layout.activity_main);
 
         try {
