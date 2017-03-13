@@ -144,7 +144,7 @@ public class SearchActivity extends AppCompatActivity {
 
     //刷新搜索历史
     private void searchHistoryRefresh() {
-        List<SearchHistoryBean> searchList = DataSupport.findAll(SearchHistoryBean.class);
+        List<SearchHistoryBean> searchList = DataSupport.order("searchTime desc").find(SearchHistoryBean.class);
 
         adapter.refresh(searchList);
     }
