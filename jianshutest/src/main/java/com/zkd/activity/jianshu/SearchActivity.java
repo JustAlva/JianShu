@@ -125,9 +125,12 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (labelsNum==0) {
+                    mFlowLayout.removeAllViews();
                     initLabel(mSecondLabels);
                     labelsNum=1;
                 }else if (labelsNum==1){
+                    mFlowLayout.removeAllViews();
+                    initLabel(mFirstLabels);
                     labelsNum=0;
                 }
 
