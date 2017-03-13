@@ -11,9 +11,23 @@ import java.io.Serializable;
 */
 public class SearchHistoryBean extends DataSupport implements Serializable {
 
-
+    private String dbId;
     private String searchContent ;
     private String searchTime;
+
+    public SearchHistoryBean(String dbId, String searchContent, String searchTime) {
+        this.dbId = dbId;
+        this.searchContent = searchContent;
+        this.searchTime = searchTime;
+    }
+
+    public String getDbId() {
+        return dbId;
+    }
+
+    public void setDbId(String dbId) {
+        this.dbId = dbId;
+    }
 
     public SearchHistoryBean(String searchContent, String searchTime) {
         this.searchContent = searchContent;

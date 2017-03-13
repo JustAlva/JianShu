@@ -23,7 +23,8 @@
             android:layout_weight="1"
             android:background="@drawable/follow_search_bg"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:baselineAligned="false">
 
             <ImageView
                 android:layout_width="16dp"
@@ -33,13 +34,16 @@
 
             <EditText
                 android:id="@+id/edt_search_content"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
                 android:layout_weight="1"
                 android:background="@null"
                 android:hint="搜索文章、专题、用户、文集"
-                android:textSize="@dimen/font_content_small" />
+                android:maxLines="1"
+                android:textSize="@dimen/font_content_small"
+                android:imeOptions="actionSearch"
+                android:inputType="text"/>
 
 
         </LinearLayout>
@@ -70,8 +74,8 @@
     <com.zkd.views.MyReboundScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="none"
-        android:fillViewport="false">
+        android:fillViewport="false"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -143,9 +147,8 @@
                 android:id="@+id/lv_search_history"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:dividerHeight="0dp"
-
-                />
+                android:layout_marginBottom="50dp"
+                android:dividerHeight="0dp" />
 
         </LinearLayout>
     </com.zkd.views.MyReboundScrollView>
